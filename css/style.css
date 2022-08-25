@@ -7,3 +7,16 @@
 body {
     font-family: sans-serif;
 }
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+  }
+  
+  #grid div{
+    width: 80px;
+    height: 80px;
+    padding: 4px;
+    margin: 10px;
+  }

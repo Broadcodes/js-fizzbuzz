@@ -1,13 +1,41 @@
-for(let i = 1; i <= 100; i++){
+// Recupero il div dal DOM che conterrà tutti i quadratini
+const contenitorGrid = document.getElementById("grid");
 
+// Ciclo per visualizzare i 100 numeri
+for(let i = 1; i <= 100; i++){
+    // Creazione dell'elemento del DOM
+    const element = document.createElement("div");
+
+    // Condizione per determinare se un numero è divisibile per 3, 5 o entrambi
     if((i % 3) === 0 && (i % 5) === 0){
-        console.log("FizzBuzz");
+        element.append(`FizzBuzz`);
+        element.style.backgroundColor = "#f0466f";
+        element.style.display = "flex";
+        element.style.justifyContent = "center";
+        element.style.alignItems = "center";
+        element.style.fontWeight = "bold";
     } else if((i % 3) === 0){
-        console.log("Fizz");
+        element.append(`Fizz`);
+        element.style.backgroundColor = "#0cd6a1";
+        element.style.display = "flex";
+        element.style.justifyContent = "center";
+        element.style.alignItems = "center";
+        element.style.fontWeight = "bold";
     } else if((i % 5) === 0){
-        console.log("Buzz");
+        element.append(`Buzz`);
+        element.style.backgroundColor = "#ffd166";
+        element.style.display = "flex";
+        element.style.justifyContent = "center";
+        element.style.alignItems = "center";
+        element.style.fontWeight = "bold";
     } else {
-        console.log(i.toFixed());
+        element.append(`${i}`);
+        element.style.backgroundColor = "#1389b2";
+        element.style.display = "flex";
+        element.style.justifyContent = "center";
+        element.style.alignItems = "center";
+        element.style.fontWeight = "bold";
     }
-    
+
+    contenitorGrid.append(element);
 }
