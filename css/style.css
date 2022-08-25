@@ -8,6 +8,19 @@ body {
     font-family: sans-serif;
 }
 
+.contenitor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #083b4c;
+}
+
+.contenitor h1{
+    font-size: 4rem;
+    color: #fff;
+    padding: 40px 0;
+}
+
 #grid{
     display: flex;
     flex-wrap: wrap;
