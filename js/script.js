@@ -6,6 +6,17 @@ for(let i = 1; i <= 100; i++){
     // Creazione dell'elemento del DOM
     const element = document.createElement("div");
 
+    element.addEventListener("mouseenter", function(){
+        element.style.borderRadius = "50px";
+        element.style.transition = "border-radius 500ms";
+        element.style.color = "#fff";
+    })
+
+    element.addEventListener("mouseleave", function(){
+        element.style.borderRadius = "0px";
+        element.style.color = "#000";
+    })
+
     // Condizione per determinare se un numero è divisibile per 3, 5 o entrambi
     if((i % 3) === 0 && (i % 5) === 0){
         element.append(`FizzBuzz`);
